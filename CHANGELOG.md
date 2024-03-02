@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.2.1
+
+### Updates
+
+- 🆙 UPDATED: README.md with Linked Lists theory
+
 ## 0.2.0
 
 ### Features
