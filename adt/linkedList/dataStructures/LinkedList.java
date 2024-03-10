@@ -1,6 +1,6 @@
-package structures;
+package adt.linkedList.dataStructures;
 
-import models.Book;
+import adt.linkedList.models.Book;
 
 /**
  * Represents a linked list data structure model.

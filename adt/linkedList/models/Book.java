@@ -1,4 +1,4 @@
-package models;
+package adt.linkedList.models;
 
 public class Book {
   // MARK I - Properties

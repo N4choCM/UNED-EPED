@@ -1,5 +1,7 @@
-import models.Book;
-import structures.LinkedList;
+package adt.linkedList;
+
+import adt.linkedList.dataStructures.LinkedList;
+import adt.linkedList.models.Book;
 
 public class Main {
   public static void main(String[] args) {
