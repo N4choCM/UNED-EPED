@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 0.3.0
+
+### Features
+
+- ✅ ADDED: Queue Data Structure Example
+- ⬆ UPDATED: Project Architecture
+
 ## 0.2.1
 
 ### Updates
