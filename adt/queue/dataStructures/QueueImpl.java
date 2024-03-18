@@ -2,6 +2,9 @@ package adt.queue.dataStructures;
 
 public class QueueImpl<E> implements Queue<E>{
 
+  /**
+   * Node class to represent the elements of the queue
+   */
   private class Node {
     public E entity;
     public Node next;
