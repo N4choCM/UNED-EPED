@@ -1,8 +1,14 @@
 # CHANGELOG
 
-## 0.3.1
+## 0.4.0
 
 ### Features
+
+- ✅ ADDED: Stack ADT module
+
+## 0.3.1
+
+### Improvements
 
 - ✅ ADDED: Comments in Queue module
 - ⬆ UPDATED: Abstraction in LinkedList module
