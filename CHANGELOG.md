@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 0.3.1
+
+### Features
+
+- ✅ ADDED: Comments in Queue module
+- ⬆ UPDATED: Abstraction in LinkedList module
+
+## 0.3.0
+
+### Features
+
+- ✅ ADDED: Queue Data Structure Example
+- ⬆ UPDATED: Project Architecture
+
 ## 0.2.1
 
 ### Updates

@@ -1,41 +1,37 @@
-package structures;
+package adt.linkedList.dataStructures;
 
-import models.Book;
 
-/**
- * Represents a linked list data structure model.
- */
-public class  LinkedList {
-
+public class LinkedListImpl<E> implements LinkedList<E>{
   // MARK I - Properties
   private Node head;
   private int length = 0;
 
 
   /**
-   * Represents a node in a linked list.
+   * Node class to represent the elements of the Linked List
    */
   public class Node {
     // MARK II - Properties
-    public Book book;
+    public E entity;
     public Node next = null;
 
     /**
-     * Constructs a new Node object with the specified book.
-     * @param book the book to be stored in the node
+     * Constructs a new Node object with the specified entity.
+     * @param entity the entity to be stored in the node
      */
-    public Node(Book book) {
-      this.book = book;
+    public Node(E entity) {
+      this.entity = entity;
     }
   }
 
   /**
-   * Inserts a new node with the given book at the beginning of the linked list.
-   * @param book the book to be inserted in the node
+   * Inserts a new node with the given entity at the beginning of the linked list.
+   * @param entity the entity to be inserted in the node
    */
-  public void insertFirst(Book book) {
-    // Creates a new node with the given book
-    Node newNode = new Node(book);
+  @Override
+  public void insertFirst(E entity) {
+    // Creates a new node with the given entity
+    Node newNode = new Node(entity);
     // Sets the next node of the new node to the current head
     newNode.next = head;
     // Updates the head of the linked list to the new node, as it was inserted in the first position
@@ -45,13 +41,14 @@ public class  LinkedList {
   }
 
   /**
-   * Inserts a new node containing the given book at the end of the linked list.
+   * Inserts a new node containing the given entity at the end of the linked list.
    * If the linked list is empty, the new node becomes the head of the list.
-   * @param book the book to be inserted
+   * @param entity the entity to be inserted
    */
-  public void insertLast(Book book) {
-    // Creates a new node with the given book
-    Node newNode = new Node(book);
+  @Override
+  public void insertLast(E entity) {
+    // Creates a new node with the given entity
+    Node newNode = new Node(entity);
     // If the linked list is empty, the new node becomes the head of the list
     if (head == null) {
       head = newNode;
@@ -71,14 +68,15 @@ public class  LinkedList {
   }
 
   /**
-   * Inserts a new node containing the specified book after the node at the given index.
+   * Inserts a new node containing the specified entity after the node at the given index.
    * If the index is out of bounds, the new node is inserted at the end of the linked list.
    * @param index the index after which the new node should be inserted
-   * @param book the book to be inserted
+   * @param entity the entity to be inserted
    */
-  public void insertAfterIndex(int index, Book book) {
-    // Creates a new node with the given book
-    Node newNode = new Node(book);
+  @Override
+  public void insertAfterIndex(int index, E entity) {
+    // Creates a new node with the given entity
+    Node newNode = new Node(entity);
     // If the linked list is empty, the new node becomes the head of the list
     if (head == null) {
       head = newNode;
@@ -106,12 +104,13 @@ public class  LinkedList {
   }
 
   /**
-   * Retrieves a book from the linked list based on the given index.
-   * @param index The index of the book to retrieve.
-   * @return The book at the specified index, or null if the index is out of range 
+   * Retrieves a entity from the linked list based on the given index.
+   * @param index The index of the entity to retrieve.
+   * @return The entity at the specified index, or null if the index is out of range 
    * or the linked list is empty.
    */
-  public Book getByIndex(int index) {
+  @Override
+  public E getByIndex(int index) {
     // If the linked list is empty, it returns null
     if (head == null) {
       return null;
@@ -131,8 +130,8 @@ public class  LinkedList {
       if (counter != index) {
         return null;
       }
-      // Otherwise, it returns the book stored in the node at the given index
-      return pointer.book;
+      // Otherwise, it returns the entity stored in the node at the given index
+      return pointer.entity;
     }
   }
 
@@ -140,6 +139,7 @@ public class  LinkedList {
    * Returns the length of the linked list.
    * @return the length of the linked list
    */
+  @Override
   public int getLength() {
     return length;
   }
@@ -148,15 +148,17 @@ public class  LinkedList {
    * Checks if the linked list is empty.
    * @return true if the linked list is empty, false otherwise.
    */
+  @Override
   public boolean isEmpty() {
     return head == null;
   }
 
   /**
-   * Removes the first node of the specified book from the linked list.
-   * If the book is found, the head of the linked list is updated and the length is decremented.
-   * @param book the book to be removed
+   * Removes the first node of the specified entity from the linked list.
+   * If the entity is found, the head of the linked list is updated and the length is decremented.
+   * @param entity the entity to be removed
    */
+  @Override
   public void removeFirst() {
     // If the linked list is not empty, it removes the first node
     if (head != null) {
@@ -172,11 +174,12 @@ public class  LinkedList {
   }
 
   /**
-   * Removes the last node of the specified book from the linked list.
-   * If the book is found, it is removed from the list and the length of the list is decremented.
-   * If the book is not found or the list is empty, no changes are made.
-   * @param book the book to be removed
+   * Removes the last node of the specified entity from the linked list.
+   * If the entity is found, it is removed from the list and the length of the list is decremented.
+   * If the entity is not found or the list is empty, no changes are made.
+   * @param entity the entity to be removed
    */
+  @Override
   public void removeLast() {
     // If the linked list is not empty, it removes the last node
     if (head != null) {
@@ -205,6 +208,7 @@ public class  LinkedList {
    * If the index is out of bounds, no action is taken.
    * @param index the index of the node to be removed
    */
+  @Override
   public void removeByIndex(int index) {
     // Checks if the LinkedList is not empty
     if (head != null) {
@@ -246,22 +250,24 @@ public class  LinkedList {
 
   /**
    * Returns a string representation of the linked list.
-   * The string contains the titles of the books in the linked list,
+   * The string contains the titles of the entitys in the linked list,
    * separated by "->" symbols.
    *
    * @return a string representation of the linked list
    */
+  @Override
   public String printList(){
     // The String to be returned, starting empty as the list has not been traversed yet.
     String result = "";
     // A pointer node that starts at the head of the list
     Node pointer = head;
-    // While the pointer is not null, it appends the title of the book in the node to the result and
+    // While the pointer is not null, it appends the title of the entity in the node to the result and
     // updates the pointer to the next node.
     while (pointer != null) {
-      result += pointer.book.getTitle() + " -> ";
+      result += pointer.entity.toString() + " -> ";
       pointer = pointer.next;
     }
     return result;
   }
+
 }

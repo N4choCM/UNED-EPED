@@ -1,4 +1,4 @@
-package models;
+package adt.linkedList.models;
 
 public class Book {
   // MARK I - Properties
@@ -43,5 +43,10 @@ public class Book {
 
   public void setIsbn(String isbn) {
     this.isbn = isbn;
+  }
+
+  // MARK V - toString
+  public String toString() {
+    return "- Title: " + title;
   }
 }
