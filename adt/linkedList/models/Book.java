@@ -44,4 +44,9 @@ public class Book {
   public void setIsbn(String isbn) {
     this.isbn = isbn;
   }
+
+  // MARK V - toString
+  public String toString() {
+    return "- Title: " + title;
+  }
 }
