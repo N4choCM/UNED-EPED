@@ -29,3 +29,17 @@ A `queue` is a linear data structure that follows the First In First Out (FIFO) 
 - Limited access -> Unlike some other data structures like arrays, queues typically only allow access to the front and rear elements, limiting flexibility in accessing arbitrary elements.
 - Fixed size (in some implementations) -> Some implementations of queues have a fixed size, which can lead to overflow errors if the queue becomes full and additional elements are inserted.
 - Overhead for dynamic resizing -> Dynamic resizing of queues, if supported, can incur overhead in terms of memory allocation and copying elements to the resized queue.
+
+### 📚 Stack
+
+A `stack` is a linear data structure that follows the Last In First Out (LIFO) principle, where elements are inserted (pushed) and removed (popped) from the same end, traditionally referred to as the top. It is often compared to a stack of plates, where you can only add or remove the top plate.
+
+👍🏼 `Advantages`:
+- LIFO order -> Stacks maintain the order in which elements are inserted and provide easy access to the most recently added elements.
+- Simple implementation -> Implementing a stack is straightforward and can be done using various underlying data structures, such as arrays or linked lists.
+- Recursive function calls -> Stacks are used in programming languages to manage function calls and support recursion.
+
+👎🏼 `Disadvantages`:
+- Limited access -> Similar to queues, stacks typically only allow access to the top element, limiting flexibility in accessing arbitrary elements.
+- Fixed size (in some implementations) -> Some implementations of stacks have a fixed size, which can lead to overflow errors if the stack becomes full and additional elements are pushed.
+- Overhead for dynamic resizing -> Dynamic resizing of stacks, if supported, can incur overhead in terms of memory allocation and copying elements to the resized stack.
