@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 0.3.1
+
+### Features
+
+- ✅ ADDED: Comments in Queue module
+- ⬆ UPDATED: Abstraction in LinkedList module
+
 ## 0.3.0
 
 ### Features
