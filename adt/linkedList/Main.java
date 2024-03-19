@@ -1,10 +1,13 @@
-import models.Book;
-import structures.LinkedList;
+package adt.linkedList;
+
+import adt.linkedList.dataStructures.LinkedList;
+import adt.linkedList.dataStructures.LinkedListImpl;
+import adt.linkedList.models.Book;
 
 public class Main {
   public static void main(String[] args) {
     // MARK I - Linked List Creation
-    LinkedList list = new LinkedList();
+    LinkedList<Book> list = new LinkedListImpl<Book>();
 
     // MARK II - Books Creation
     Book book1 = new Book(
