@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 0.5.0
+
+### Features
+
+- ✅ ADDED: BST ADT module
+
 ## 0.4.0
 
 ### Features
