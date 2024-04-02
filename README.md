@@ -43,3 +43,20 @@ A `stack` is a linear data structure that follows the Last In First Out (LIFO) p
 - Limited access -> Similar to queues, stacks typically only allow access to the top element, limiting flexibility in accessing arbitrary elements.
 - Fixed size (in some implementations) -> Some implementations of stacks have a fixed size, which can lead to overflow errors if the stack becomes full and additional elements are pushed.
 - Overhead for dynamic resizing -> Dynamic resizing of stacks, if supported, can incur overhead in terms of memory allocation and copying elements to the resized stack.
+
+### 🌳 Binary Search Trees (BST)
+
+A `BST`  is a hierarchical data structure consisting of nodes, where each node has at most two children, referred to as the left child and the right child. The binary search tree property ensures that for any given node:
+
+* All nodes in the left subtree have values less than the node's value.
+* All nodes in the right subtree have values greater than the node's value.
+
+👍🏼 `Advantages`:
+- Efficient searching -> Binary search trees provide efficient search operations (average case O(log n)) due to their hierarchical nature and the binary search property, making them suitable for applications requiring fast retrieval of data.
+- Ordered structure -> The binary search tree maintains data in sorted order, which can be beneficial for applications requiring sorted data traversal or retrieval.
+- Easy insertion and deletion -> Insertion and deletion operations in binary search trees can be performed efficiently (average case O(log n)) while maintaining the binary search tree property.
+
+👎🏼 `Disadvantages`:
+- Imbalanced trees -> In worst-case scenarios, binary search trees can become unbalanced, leading to degradation in performance (O(n) for search, insertion, and deletion operations). This can occur if the tree is constructed in a non-optimal order or if certain operations lead to an imbalance.
+- Degenerate trees -> In the worst-case scenario, binary search trees can degenerate into linked lists if elements are inserted or deleted in a sorted order, resulting in poor performance for search operations (O(n)).
+- Complex balancing strategies -> Balancing binary search trees (e.g., AVL trees, Red-Black trees) to maintain optimal performance requires complex algorithms and additional overhead in terms of memory and computation.
